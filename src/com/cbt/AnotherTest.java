@@ -29,7 +29,14 @@ public class AnotherTest {
 		Thread.sleep(1000);
 		driver.navigate().forward();//we went to google again
 		driver.navigate().refresh();//it is only refresh current page
-		
+		Thread.sleep(2000);
+		driver.close(); // it will close curent tab 
+		//if there is multiple tab it will not be effected
+		//and we can still use the webdriver object
+		/*
+		 * driver.quit();
+		 * you  close all tabs and windows
+		 * end sessision we can not use same webdriver object again you need to insatntiated again*/
 	}
 
 }
